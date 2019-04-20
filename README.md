@@ -110,6 +110,3 @@ There is an easier way to debug for beginners with free Visual Studio Code:
 
 ##Contribution
 Feel free to contribute into this project. New tasks and katas are welcome.
-git add README.md
-git commit -m "Update the links"
-git push origin master
