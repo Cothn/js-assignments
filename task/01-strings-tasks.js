@@ -25,7 +25,6 @@ function concatenateStrings(value1, value2) {
 	return value1 + value2;    
 }
 
-
 /**
  * Returns the length of given string.
  *
@@ -40,6 +39,7 @@ function concatenateStrings(value1, value2) {
 function getStringLength(value) {
     return value.length;
 }
+
 
 /**
  * Returns the result of string template and given parameters firstName and lastName.
@@ -72,7 +72,6 @@ function extractNameFromTemplate(value) {
 	return value.substring(7, value.length - 1)
 }
 
-
 /**
  * Returns a first char of the given string.
  *
@@ -84,7 +83,7 @@ function extractNameFromTemplate(value) {
  *   'cat'       => 'c'
  */
 function getFirstChar(value) {
-    throw new Error('Not implemented');
+    return value.charAt(0);
 }
 
 /**
@@ -99,7 +98,7 @@ function getFirstChar(value) {
  *   '\tHello, World! ' => 'Hello, World!'
  */
 function removeLeadingAndTrailingWhitespaces(value) {
-    throw new Error('Not implemented');
+    return value.trim();
 }
 
 /**
