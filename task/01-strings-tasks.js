@@ -40,7 +40,6 @@ function getStringLength(value) {
     return value.length;
 }
 
-
 /**
  * Returns the result of string template and given parameters firstName and lastName.
  * Please do not use concatenation, use template string :
@@ -113,7 +112,7 @@ function removeLeadingAndTrailingWhitespaces(value) {
  *   'cat', 3 => 'catcatcat'
  */
 function repeatString(value, count) {
-    throw new Error('Not implemented');
+	return value.repeat(count);
 }
 
 /**
