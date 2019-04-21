@@ -10,7 +10,7 @@
  *********************************************************************************************/
 
  
-/**
+/**1
  * Returns an index of the specified element in array or -1 if element is not found
  * 
  * @param {array} arr
@@ -23,7 +23,7 @@
  *    [0, 1, 2, 3, 4, 5], 5    => 5
  */
 function findElement(arr, value) {
-   throw new Error('Not implemented');
+	return arr.indexOf(value);
 }
 
 /**
@@ -38,7 +38,8 @@ function findElement(arr, value) {
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
 function generateOdds(len) {
-   throw new Error('Not implemented');
+	let odds = new Array(len).fill(1);
+	return odds.map((el, i)=>{return el*(i*2+1);})
 }
 
 
@@ -54,7 +55,7 @@ function generateOdds(len) {
  *    [] => [] 
  */
 function doubleArray(arr) {
-   throw new Error('Not implemented');
+	return arr.concat(arr);
 }
 
 
@@ -70,7 +71,7 @@ function doubleArray(arr) {
  *    [] => [] 
  */
 function getArrayOfPositives(arr) {
-   throw new Error('Not implemented');
+	return arr.filter(num => num > 0);
 }
 
 /**
@@ -85,7 +86,7 @@ function getArrayOfPositives(arr) {
  *    [ 'cat, 'dog', 'raccon' ] => [ 'cat', 'dog', 'racoon' ]
  */
 function getArrayOfStrings(arr) {
-   throw new Error('Not implemented');
+	return arr.filter(str => typeof(str) == 'string');
 }
 
 /**
@@ -102,7 +103,7 @@ function getArrayOfStrings(arr) {
  *    [ false, 0, NaN, '', undefined ]   => [ ]
  */
 function removeFalsyValues(arr) {
-   throw new Error('Not implemented');
+	return arr.filter(Boolean);
 }
 
 /**
@@ -116,7 +117,7 @@ function removeFalsyValues(arr) {
  *    [ 'a', 'b', 'c', 'd', 'e', 'f', 'g' ]  => [ 'A', 'B', 'C', 'D', 'E', 'F', 'G' ]
  */
 function getUpperCaseStrings(arr) {
-   throw new Error('Not implemented');
+	return arr.map(el => el.toUpperCase());
 }
 
 
@@ -131,10 +132,10 @@ function getUpperCaseStrings(arr) {
  *    [ 'angular', 'react', 'ember' ] => [ 7, 5, 5 ]
  */
 function getStringsLength(arr) {
-   throw new Error('Not implemented');
+   	return arr.map(el => el.length);
 }
 
-/**
+/**error
  * Inserts the item into specified array at specified index
  * 
  * @param {array} arr
@@ -143,13 +144,13 @@ function getStringsLength(arr) {
  * 
  * @example
  *    [ 1, 3, 4, 5 ], 2, 1  => [ 1, 2, 3, 4, 5 ]
- *    [ 1, 'b', 'c'], 0, 'x'  => [ 'x', 1, 'b', 'c' ]
+ *    [ 1, 'b', 'c'], 'x'!, 0!  => [ 'x', 1, 'b', 'c' ]
  */
 function insertItem(arr, item, index) {
-   throw new Error('Not implemented');
+	return arr.splice(index, 0, item);
 }
 
-/**
+/**10
  * Returns the n first items of the specified array
  * 
  * @param {array} arr
@@ -324,7 +325,7 @@ function sortDigitNamesByNumericOrder(arr) {
    throw new Error('Not implemented');
 }
 
-/** 
+/** 20
  * Returns the sum of all items in the specified array of numbers
  * 
  * @param {array} arr
@@ -340,7 +341,7 @@ function getItemsSum(arr) {
    throw new Error('Not implemented');
 }
  
-/** 
+/**
  * Returns the number of all falsy value in the specified array
  * 
  * @param {array} arr
@@ -523,7 +524,7 @@ function selectMany(arr, childrenSelector) {
 }
 
 
-/**
+/**30
  * Returns an element from the multidimentional array by the specified indexes.
  *
  * @param {array} arr
