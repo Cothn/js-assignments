@@ -30,7 +30,7 @@
  *
  */
 function getFizzBuzz(num) {
-    throw new Error('Not implemented');
+	return num % 3 == 0 ? num % 5 == 0 ? 'FizzBuzz' : 'Fizz' : num % 5 == 0 ? 'Buzz' : num;
 }
 
 
@@ -46,7 +46,10 @@ function getFizzBuzz(num) {
  *   10 => 3628800
  */
 function getFactorial(n) {
-    throw new Error('Not implemented');
+	if (n === 0) 
+        return 1;
+    else {
+		return (n * getFactorial(n - 1));}
 }
 
 
@@ -63,7 +66,12 @@ function getFactorial(n) {
  *   -1,1  =>  0  ( = -1 + 0 + 1 )
  */
 function getSumBetweenNumbers(n1, n2) {
-    throw new Error('Not implemented');
+    let sum = 0;
+    while (n1 <= n2) {
+        sum+= n1;
+        n1++;
+    }
+	return sum;
 }
 
 
@@ -82,11 +90,12 @@ function getSumBetweenNumbers(n1, n2) {
  *   10,10,10 =>  true
  */
 function isTriangle(a,b,c) {
-    throw new Error('Not implemented');
+    if (a + b > c && a + c > b && b + c > a) return true;
+	else return false;
 }
 
 
-/**
+/**5
  * Returns true, if two specified axis-aligned rectangles overlap, otherwise false.
  * Each rectangle representing by object 
  *  {
@@ -119,7 +128,10 @@ function isTriangle(a,b,c) {
  *  
  */
 function doRectanglesOverlap(rect1, rect2) {
-    throw new Error('Not implemented');
+    var h = rect2.top - (rect1.top + rect1.height);
+	var w = rect2.left - (rect1.left + rect1.width);
+	if (h > 0 || w > 0) return false;
+	else return true;
 }
 
 
@@ -150,7 +162,9 @@ function doRectanglesOverlap(rect1, rect2) {
  *   
  */
 function isInsideCircle(circle, point) {
-    throw new Error('Not implemented');
+    let dist = Math.sqrt(Math.pow((point.x - circle.center.x), 2) + Math.pow((point.y - circle.center.y), 2));
+    if (dist < circle.radius) return true;
+	else return false;
 }
 
 
@@ -166,7 +180,15 @@ function isInsideCircle(circle, point) {
  *   'entente' => null
  */
 function findFirstSingleChar(str) {
-    throw new Error('Not implemented');
+    for (var i = 0; i < str.length; i++)
+    {
+        var ch = str.charAt(i);
+        if (str.indexOf(ch) === str.lastIndexOf(ch))
+        {
+            return ch;
+        }
+    }
+	return null;
 }
 
 
@@ -192,7 +214,11 @@ function findFirstSingleChar(str) {
  *
  */
 function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
-    throw new Error('Not implemented');
+    var str = '';
+    str += isStartIncluded ?  '[' : '(';
+    str += a > b ? (b + ', ' + a) : (a + ', ' + b);
+    str += isEndIncluded ? ']' : ')'; 
+	return str;
 }
 
 
@@ -209,11 +235,11 @@ function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
  * 'noon' => 'noon'
  */
 function reverseString(str) {
-    throw new Error('Not implemented');
+	return str.split("").reverse().join("");
 }
 
 
-/**
+/**10
  * Reverse the specified integer number (put all digits in reverse order)
  *
  * @param {number} num
@@ -226,7 +252,7 @@ function reverseString(str) {
  *   34143 => 34143
  */
 function reverseInteger(num) {
-    throw new Error('Not implemented');
+	return num.toString().split('').reverse().join("");
 }
 
 
@@ -336,7 +362,7 @@ function timespanToHumanString(startDate, endDate) {
 }
 
 
-/**
+/**15
  * Returns the string with n-ary (binary, ternary, etc, where n<=10) representation of specified number.
  * See more about
  * https://en.wikipedia.org/wiki/Binary_number
