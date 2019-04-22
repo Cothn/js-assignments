@@ -22,14 +22,15 @@
  *    console.log(r.height);      // => 20
  *    console.log(r.getArea());   // => 200
  */
-function Rectangle(width, height) {
+class Rectangle {
     constructor(width, height) {
         this.height = height;
         this.width = width;
     }
+
     getArea() {
         return this.width * this.height;
-	}
+    }
 }
 
 
@@ -114,6 +115,7 @@ function fromJSON(proto, json) {
 
 const cssSelectorBuilder = {
 
+
     element: function(value) {
         throw new Error('Not implemented');
     },
@@ -140,7 +142,7 @@ const cssSelectorBuilder = {
 
     combine: function(selector1, combinator, selector2) {
         throw new Error('Not implemented');
-    },
+},
 };
 
 
