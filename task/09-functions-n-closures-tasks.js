@@ -11,7 +11,7 @@
  **********************************************************************************************/
 
 
-/**
+/**err
  * Returns the functions composition of two specified functions f(x) and g(x).
  * The result of compose is to be a function of one argument, (lets call the argument x),
  * which works like applying function f to the result of applying function g to x, i.e.
@@ -22,11 +22,11 @@
  * @return {Function}
  *
  * @example
- *   getComposition(Math.sin, Math.asin)(x) => Math.sin(Math.acos(x))
+ *   getComposition(Math.sin, Math.asin)(x) => Math.sin(Math.acos!(x))
  *
  */
 function getComposition(f,g) {
-    throw new Error('Not implemented');
+	return x => f(g(x));
 }
 
 
@@ -47,7 +47,7 @@ function getComposition(f,g) {
  *
  */
 function getPowerFunction(exponent) {
-    throw new Error('Not implemented');
+	return x => Math.pow(x, exponent);
 }
 
 
