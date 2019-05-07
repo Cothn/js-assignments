@@ -175,9 +175,9 @@ function logger(func, logFunc) {
  *   partialUsingArguments(fn, 'a','b','c')('d') => 'abcd'
  *   partialUsingArguments(fn, 'a','b','c','d')() => 'abcd'
  */
-function partialUsingArguments(fn/**, ...args0 */) {
-	    throw new Error('Not implemented');
-	//return (...args1) =>( fn(...args0,...args1));
+function partialUsingArguments(fn, ...args0 ) {
+	    //throw new Error('Not implemented');
+	return (...args1) =>( fn(...args0,...args1));
 }
 
 
